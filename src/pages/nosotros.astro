@@ -1,0 +1,414 @@
+---
+// src/pages/nosotros.astro
+import Layout from '../layouts/Layout.astro';
+
+// Timeline data
+const timeline = [
+  {
+    year: '2018',
+    title: 'El Comienzo',
+    description: 'Don Felipe decide dar un giro radical a su producción. De métodos intensivos a criar gallinas felices y producir alimentos limpios.',
+    icon: 'seed'
+  },
+  {
+    year: '2019',
+    title: 'Primeras 12 Gallinas',
+    description: 'Arrancamos con 12 pollitas Isa Brown. Un proyecto familiar modesto pero con una visión clara: calidad sobre cantidad.',
+    icon: 'chicken'
+  },
+  {
+    year: '2020',
+    title: 'Apertura al Público',
+    description: 'Decidimos abrir las puertas de la granja. Las primeras familias y escuelas empiezan a visitarnos para aprender sobre producción sustentable.',
+    icon: 'people'
+  },
+  {
+    year: '2022',
+    title: 'Expansión Agroecológica',
+    description: 'Superamos las 200 gallinas y sumamos pollos de campo. Consolidamos nuestro modelo agroecológico con huerta propia.',
+    icon: 'growth'
+  },
+  {
+    year: '2025',
+    title: 'Presente',
+    description: 'Hoy somos un referente local en producción agroecológica y educación ambiental. Seguimos creciendo con los valores intactos.',
+    icon: 'heart'
+  }
+];
+
+// Values
+const values = [
+  {
+    title: 'Respeto por la Naturaleza',
+    description: 'Trabajamos en armonía con los ciclos naturales. Sin apuros, sin químicos, sin atajos que comprometan la salud de nuestros animales o el ambiente.',
+    icon: 'nature'
+  },
+  {
+    title: 'Transparencia Total',
+    description: 'Abrimos nuestras puertas para que veas cómo trabajamos. No hay secretos. Creemos que cada persona tiene derecho a saber de dónde viene su comida.',
+    icon: 'transparency'
+  },
+  {
+    title: 'Educación y Comunidad',
+    description: 'No solo vendemos productos. Compartimos conocimiento. Cada visita es una oportunidad para reconectar a las personas con la tierra.',
+    icon: 'education'
+  },
+  {
+    title: 'Bienestar Animal',
+    description: 'Nuestros animales viven como deben vivir: libres, con espacio, alimentación natural y cuidados responsables. Su bienestar no es negociable.',
+    icon: 'heart'
+  }
+];
+
+// Team members
+const team = [
+  {
+    name: 'Felipe Rodríguez',
+    role: 'Fundador y Productor',
+    description: 'El alma de la granja. Con más de 30 años de experiencia en producción avícola, Felipe lidera la transición hacia modelos sustentables.',
+    image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop'
+  },
+  {
+    name: 'María Rodríguez',
+    role: 'Coordinadora de Visitas',
+    description: 'Encargada de las experiencias educativas. Maestra de profesión, María diseña las actividades para que chicos y grandes aprendan jugando.',
+    image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop'
+  },
+  {
+    name: 'Lucas Rodríguez',
+    role: 'Producción y Logística',
+    description: 'La nueva generación. Lucas aporta conocimientos técnicos y se encarga de la gestión diaria, entregas y cuidado de los animales.',
+    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop'
+  }
+];
+
+// Stats
+const stats = [
+  { number: '7+', label: 'Años de Trayectoria', suffix: '' },
+  { number: '200', label: 'Gallinas Felices', suffix: '+' },
+  { number: '1500', label: 'Visitas Educativas', suffix: '+' },
+  { number: '100', label: 'Familias Abastecidas', suffix: '%' }
+];
+---
+
+<Layout 
+  title="Nosotros - Granja Don Felipe | Historia y Valores"
+  description="Conocé la historia de Granja Don Felipe, una familia de productores agroecológicos en Jujuy comprometida con la naturaleza, la transparencia y la educación ambiental."
+>
+  
+  <!-- Hero Section -->
+  <section class="relative bg-cream-100 py-20 lg:py-32 overflow-hidden">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <span class="inline-block px-4 py-2 bg-green-100 text-green-700 rounded-full text-sm font-medium mb-6">
+          Nuestra Historia
+        </span>
+        <h1 class="font-serif text-5xl lg:text-6xl xl:text-7xl font-bold text-gray-900 mb-6 leading-tight">
+          Granja Don Felipe
+        </h1>
+        <p class="text-xl lg:text-2xl text-gray-600 leading-relaxed">
+          Una familia que eligió producir distinto: con amor, respeto y compromiso con la tierra.
+        </p>
+      </div>
+    </div>
+    
+    <!-- Decorative elements -->
+    <div class="absolute top-10 left-10 w-20 h-20 bg-green-200 rounded-full opacity-20 blur-2xl"></div>
+    <div class="absolute bottom-10 right-10 w-32 h-32 bg-yellow-200 rounded-full opacity-20 blur-2xl"></div>
+  </section>
+
+  <!-- Story Section -->
+  <section class="py-20 lg:py-32">
+    <div class="container mx-auto px-4">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-20">
+        
+        <!-- Image -->
+        <div class="relative">
+          <div class="absolute -inset-4 bg-green-100 rounded-3xl transform rotate-3"></div>
+          <div class="relative rounded-3xl overflow-hidden shadow-2xl">
+            <img 
+              src="https://images.unsplash.com/photo-1560493676-04071c5f467b?w=800&h=600&fit=crop" 
+              alt="Familia en Granja Don Felipe"
+              class="w-full h-full object-cover"
+            />
+          </div>
+        </div>
+
+        <!-- Content -->
+        <div class="space-y-6">
+          <h2 class="font-serif text-4xl lg:text-5xl font-bold text-gray-900">
+            De la Crisis a la Oportunidad
+          </h2>
+          
+          <div class="prose prose-lg text-gray-600">
+            <p class="mb-4">
+              En 2018, Don Felipe y su familia enfrentaban una encrucijada. Llevaban años produciendo huevos de forma intensiva, pero algo no cerraba. Los márgenes se achicaban, los costos de insumos subían y, sobre todo, había una sensación de que algo fundamental se había perdido en el camino.
+            </p>
+            
+            <p class="mb-4">
+              Fue entonces cuando decidieron hacer algo radical: volver a lo básico. Dejar atrás las jaulas, los alimentos balanceados industriales y el apuro por crecer rápido. Apostar por criar gallinas felices, producir alimentos limpios y recuperar el vínculo con la tierra.
+            </p>
+            
+            <p class="mb-4">
+              Empezaron con 12 pollitas Isa Brown en un terreno al lado de su casa. Nada de certificaciones internacionales ni grandes inversiones. Solo la convicción de que había otra forma de hacer las cosas.
+            </p>
+            
+            <p>
+              Lo que no imaginaban era que ese pequeño experimento familiar se convertiría en algo mucho más grande: un espacio de aprendizaje, un modelo de producción sustentable y, sobre todo, una comunidad de personas que creen que la comida puede ser diferente.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quote -->
+      <div class="max-w-4xl mx-auto bg-green-600 rounded-3xl p-8 lg:p-12 text-center text-white">
+        <svg class="w-12 h-12 mx-auto mb-6 opacity-50" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+        </svg>
+        <p class="font-serif text-2xl lg:text-3xl font-bold mb-4">
+          "No es solo producir huevos. Es mostrar que hay otra forma de vivir, de trabajar y de conectarse con lo que comemos."
+        </p>
+        <p class="text-green-100 text-lg">
+          — Felipe Rodríguez, Fundador
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Timeline -->
+  <section class="py-20 lg:py-32 bg-cream-50">
+    <div class="container mx-auto px-4">
+      <div class="max-w-3xl mx-auto text-center mb-16">
+        <h2 class="font-serif text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+          Nuestra Evolución
+        </h2>
+        <p class="text-xl text-gray-600">
+          Desde las primeras 12 pollitas hasta convertirnos en un referente local
+        </p>
+      </div>
+
+      <div class="max-w-5xl mx-auto">
+        <div class="relative">
+          <!-- Vertical line -->
+          <div class="hidden lg:block absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-green-200"></div>
+          
+          <div class="space-y-12">
+            {timeline.map((item, index) => (
+              <div class={`relative flex items-center ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-8`}>
+                
+                <!-- Timeline dot -->
+                <div class="hidden lg:flex absolute left-1/2 transform -translate-x-1/2 w-16 h-16 bg-green-600 rounded-full border-6 border-green-200 z-10 items-center justify-center shadow-lg">
+                  <span class="text-white font-bold text-sm text-center block">{item.year}</span>
+                </div>
+
+                <!-- Content -->
+                <div class="lg:w-1/2">
+                  <div class={`bg-white rounded-2xl p-6 lg:p-8 shadow-lg hover:shadow-xl transition-shadow ${index % 2 === 0 ? 'lg:text-right' : 'lg:text-left'}`}>
+                    <div class="flex items-center gap-3 mb-3 lg:hidden">
+                      <span class="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center text-white font-bold text-sm">
+                        {item.year}
+                      </span>
+                      <h3 class="font-serif text-2xl font-bold text-gray-900">
+                        {item.title}
+                      </h3>
+                    </div>
+                    <h3 class="hidden lg:block font-serif text-2xl font-bold text-gray-900 mb-3">
+                      {item.title}
+                    </h3>
+                    <p class="text-gray-600 leading-relaxed">
+                      {item.description}
+                    </p>
+                  </div>
+                </div>
+
+                <div class="hidden lg:block lg:w-1/2"></div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Values Section -->
+  <section class="py-20 lg:py-32">
+    <div class="container mx-auto px-4">
+      <div class="max-w-3xl mx-auto text-center mb-16">
+        <h2 class="font-serif text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+          Nuestros Valores
+        </h2>
+        <p class="text-xl text-gray-600">
+          Los pilares que guían cada decisión que tomamos en la granja
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8 lg:gap-12 max-w-6xl mx-auto">
+        {values.map((value) => (
+          <div class="group bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+            <div class="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-green-600 transition-colors">
+              <svg class="w-8 h-8 text-green-600 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+            </div>
+            <h3 class="font-serif text-2xl font-bold text-gray-900 mb-4">
+              {value.title}
+            </h3>
+            <p class="text-gray-600 leading-relaxed">
+              {value.description}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section class="py-20 lg:py-32 bg-cream-50">
+    <div class="container mx-auto px-4">
+      <div class="max-w-3xl mx-auto text-center mb-16">
+        <h2 class="font-serif text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+          La Familia
+        </h2>
+        <p class="text-xl text-gray-600">
+          Conocé a las personas detrás de cada huevo, cada visita y cada decisión
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        {team.map((member) => (
+          <div class="group bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+            <div class="relative h-80 overflow-hidden">
+              <img 
+                src={member.image} 
+                alt={member.name}
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+              <div class="absolute bottom-6 left-6 right-6 text-white">
+                <h3 class="font-serif text-2xl font-bold mb-1">
+                  {member.name}
+                </h3>
+                <p class="text-green-300 font-medium">
+                  {member.role}
+                </p>
+              </div>
+            </div>
+            <div class="p-6">
+              <p class="text-gray-600 leading-relaxed">
+                {member.description}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="py-20 lg:py-32 bg-green-600 text-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-5xl mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="font-serif text-4xl lg:text-5xl font-bold mb-4">
+            Granja Don Felipe en Números
+          </h2>
+          <p class="text-xl text-green-100">
+            Resultados que nos enorgullecen
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-4 gap-8">
+          {stats.map((stat) => (
+            <div class="text-center">
+              <div class="font-serif text-5xl lg:text-6xl font-bold mb-2">
+                {stat.suffix === '+' ? `${stat.number}+` : stat.number}{stat.suffix === '%' && '%'}
+              </div>
+              <div class="text-green-100 text-lg">
+                {stat.label}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Recognition Section -->
+  <section class="py-20 lg:py-32">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-12">
+          <h2 class="font-serif text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+            Reconocimientos
+          </h2>
+          <p class="text-xl text-gray-600">
+            El trabajo bien hecho tiene su recompensa
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          <!-- Recognition 1 -->
+          <div class="bg-cream-50 rounded-2xl p-8 text-center">
+            <div class="w-20 h-20 bg-yellow-400 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+              </svg>
+            </div>
+            <h3 class="font-semibold text-xl text-gray-900 mb-2">
+              Productor Agroecológico Destacado
+            </h3>
+            <p class="text-gray-600">
+              Municipalidad de San Salvador - 2023
+            </p>
+          </div>
+
+          <!-- Recognition 2 -->
+          <div class="bg-cream-50 rounded-2xl p-8 text-center">
+            <div class="w-20 h-20 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+              </svg>
+            </div>
+            <h3 class="font-semibold text-xl text-gray-900 mb-2">
+              Proyecto Educativo Ambiental
+            </h3>
+            <p class="text-gray-600">
+              Ministerio de Educación de Jujuy - 2022
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-20 lg:py-32 bg-cream-50">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto bg-gradient-to-br from-green-600 to-green-700 rounded-3xl overflow-hidden">
+        <div class="p-8 lg:p-16 text-center text-white">
+          <h2 class="font-serif text-3xl lg:text-4xl font-bold mb-4">
+            ¿Querés Ser Parte de Esta Historia?
+          </h2>
+          <p class="text-xl text-green-50 mb-8">
+            Comprando nuestros productos o visitando la granja, estás apoyando un modelo de producción distinto. Uno que respeta la naturaleza, cuida a los animales y fortalece la comunidad local.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a 
+              href="/productos"
+              class="inline-flex items-center justify-center px-8 py-4 bg-white text-green-600 font-semibold rounded-lg hover:bg-green-50 transition-all duration-300"
+            >
+              Ver Productos
+            </a>
+            <a 
+              href="/visitas"
+              class="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-green-600 transition-all duration-300"
+            >
+              Agendar Visita
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</Layout>

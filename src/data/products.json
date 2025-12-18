@@ -1,0 +1,393 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Huevos Agroecológicos - Media Docena",
+      "slug": "huevos-media-docena",
+      "category": "huevos",
+      "price": 1500,
+      "unit": "6 unidades",
+      "image": "https://images.unsplash.com/photo-1582722872445-44dc1f3e3b84?w=600&h=400&fit=crop",
+      "description": "6 huevos frescos de gallinas Isa Brown criadas en libertad. Yema naranja intensa y sabor incomparable.",
+      "longDescription": "Nuestros huevos provienen de gallinas Isa Brown que viven en libertad, con acceso a espacios abiertos y alimentación natural. La diferencia se nota en el color intenso de la yema y el sabor auténtico de huevos de verdad. Recolectados diariamente para garantizar máxima frescura.",
+      "features": [
+        "Recolección diaria",
+        "Sin químicos ni hormonas",
+        "Gallinas en libertad",
+        "Alimentación natural",
+        "Yema naranja intensa"
+      ],
+      "nutritionalInfo": {
+        "protein": "6g por huevo",
+        "omega3": "Rico en Omega-3",
+        "vitamins": "Vitaminas A, D, E"
+      },
+      "available": true,
+      "stock": "high",
+      "featured": false,
+      "badge": null,
+      "tags": ["huevos", "frescos", "agroecológico", "libre de jaula"],
+      "weight": "330g aprox",
+      "minOrder": 1,
+      "maxOrder": 10
+    },
+    {
+      "id": 2,
+      "name": "Huevos Agroecológicos - Docena",
+      "slug": "huevos-docena",
+      "category": "huevos",
+      "price": 2800,
+      "unit": "12 unidades",
+      "image": "https://images.unsplash.com/photo-1518569656558-1f25e69d93d7?w=600&h=400&fit=crop",
+      "description": "12 huevos frescos de gallinas Isa Brown criadas en libertad. La opción más popular para familias.",
+      "longDescription": "Nuestra presentación más vendida. Ideal para familias que consumen huevos regularmente y buscan calidad constante. Cada docena es cuidadosamente seleccionada y empacada el mismo día de la recolección.",
+      "features": [
+        "Recolección diaria",
+        "Sin químicos ni hormonas",
+        "Gallinas en libertad",
+        "Alimentación natural",
+        "Mejor precio por unidad"
+      ],
+      "nutritionalInfo": {
+        "protein": "6g por huevo",
+        "omega3": "Rico en Omega-3",
+        "vitamins": "Vitaminas A, D, E"
+      },
+      "available": true,
+      "stock": "high",
+      "featured": true,
+      "badge": "Más Vendido",
+      "tags": ["huevos", "frescos", "agroecológico", "popular", "familia"],
+      "weight": "660g aprox",
+      "minOrder": 1,
+      "maxOrder": 8,
+      "discount": {
+        "quantity": 3,
+        "percentage": 5,
+        "description": "5% off comprando 3 o más docenas"
+      }
+    },
+    {
+      "id": 3,
+      "name": "Huevos Agroecológicos - Maple x30",
+      "slug": "huevos-maple-30",
+      "category": "huevos",
+      "price": 6500,
+      "unit": "30 unidades",
+      "image": "https://images.unsplash.com/photo-1606787364406-a3d4d55d9f6b?w=600&h=400&fit=crop",
+      "description": "Maple completo de 30 huevos. Ideal para familias numerosas o pequeños negocios.",
+      "longDescription": "Presentación mayorista perfecta para familias grandes, pequeños emprendimientos gastronómicos o quienes consumen muchos huevos. Mejor precio por unidad y misma calidad premium de siempre.",
+      "features": [
+        "Recolección diaria",
+        "Sin químicos ni hormonas",
+        "Gallinas en libertad",
+        "Mejor precio unitario",
+        "Packaging resistente"
+      ],
+      "nutritionalInfo": {
+        "protein": "6g por huevo",
+        "omega3": "Rico en Omega-3",
+        "vitamins": "Vitaminas A, D, E"
+      },
+      "available": true,
+      "stock": "medium",
+      "featured": false,
+      "badge": "Mejor Precio",
+      "tags": ["huevos", "mayorista", "ahorro", "familia numerosa"],
+      "weight": "1650g aprox",
+      "minOrder": 1,
+      "maxOrder": 5
+    },
+    {
+      "id": 4,
+      "name": "Pollo de Campo Entero",
+      "slug": "pollo-entero",
+      "category": "pollos",
+      "price": 4500,
+      "unit": "Por unidad",
+      "image": "https://images.unsplash.com/photo-1587593810167-a84920ea0781?w=600&h=400&fit=crop",
+      "description": "Pollo criado en libertad, sin antibióticos. Peso aproximado 2-2.5kg. Carne sabrosa y saludable.",
+      "longDescription": "Nuestros pollos de campo se crían al aire libre con tiempo suficiente para desarrollarse naturalmente. Sin hormonas de crecimiento ni antibióticos. La carne es más firme, sabrosa y saludable que la de pollos industriales. Ideal para preparaciones al horno, parrilla o guisos.",
+      "features": [
+        "Crianza libre",
+        "Sin antibióticos",
+        "Alimentación natural",
+        "Sacrificio humanitario",
+        "Carne firme y sabrosa"
+      ],
+      "nutritionalInfo": {
+        "protein": "Alto contenido proteico",
+        "fat": "Bajo en grasas saturadas",
+        "natural": "Sin hormonas de crecimiento"
+      },
+      "available": true,
+      "stock": "medium",
+      "featured": false,
+      "badge": null,
+      "tags": ["pollo", "campo", "sin antibióticos", "natural"],
+      "weight": "2-2.5kg aprox",
+      "minOrder": 1,
+      "maxOrder": 3,
+      "preparation": "Faenado fresco bajo pedido",
+      "leadTime": "48hs de anticipación"
+    },
+    {
+      "id": 5,
+      "name": "Pollo de Campo - Presa (kg)",
+      "slug": "pollo-presa-kg",
+      "category": "pollos",
+      "price": 2200,
+      "unit": "Por kilogramo",
+      "image": "https://images.unsplash.com/photo-1598103442097-8b74394b95c6?w=600&h=400&fit=crop",
+      "description": "Presas sueltas de pollo de campo. Elegí las partes que más te gusten (pechuga, pata, muslo).",
+      "longDescription": "Vendemos presas sueltas para que elijas exactamente lo que necesitás. Pechuga para milanesas, patas y muslos para guisos, o alitas para la parrilla. Todos los cortes mantienen la calidad de nuestros pollos criados al aire libre.",
+      "features": [
+        "Venta por kg",
+        "Cortes a elección",
+        "Sin antibióticos",
+        "Frescura garantizada",
+        "Crianza libre"
+      ],
+      "nutritionalInfo": {
+        "protein": "Alto contenido proteico",
+        "fat": "Bajo en grasas saturadas",
+        "natural": "Sin hormonas de crecimiento"
+      },
+      "available": true,
+      "stock": "medium",
+      "featured": false,
+      "badge": null,
+      "tags": ["pollo", "presas", "cortes", "flexible"],
+      "weight": "Precio por kg",
+      "minOrder": 1,
+      "maxOrder": 10,
+      "cuts": [
+        "Pechuga",
+        "Pata",
+        "Muslo",
+        "Alita",
+        "Contramuslo"
+      ],
+      "preparation": "Faenado fresco bajo pedido",
+      "leadTime": "48hs de anticipación"
+    },
+    {
+      "id": 6,
+      "name": "Gallina Ponedora - Pollita Joven",
+      "slug": "gallina-pollita",
+      "category": "gallinas",
+      "price": 3500,
+      "unit": "Por unidad",
+      "image": "https://images.unsplash.com/photo-1516876437184-593fda40c7ce?w=600&h=400&fit=crop",
+      "description": "Pollitas Isa Brown de 3-4 meses, listas para comenzar a poner en pocas semanas.",
+      "longDescription": "Pollitas jóvenes de raza Isa Brown, la mejor ponedora comercial. Ya vacunadas y acostumbradas a nuestro sistema de crianza. En 4-6 semanas comenzarán a poner huevos. Ideal para quien quiere arrancar su propia producción casera desde cero.",
+      "features": [
+        "Raza Isa Brown",
+        "Vacunadas",
+        "3-4 meses de edad",
+        "Alta producción futura",
+        "Saludables y activas"
+      ],
+      "productionInfo": {
+        "eggsPerYear": "280-320 huevos/año",
+        "startLaying": "18-22 semanas",
+        "peakProduction": "6-18 meses"
+      },
+      "available": true,
+      "stock": "low",
+      "featured": false,
+      "badge": null,
+      "tags": ["gallina", "ponedora", "pollita", "producción"],
+      "weight": "1-1.5kg aprox",
+      "minOrder": 2,
+      "maxOrder": 20,
+      "care": "Requiere corral y alimentación balanceada"
+    },
+    {
+      "id": 7,
+      "name": "Gallina Ponedora - Adulta",
+      "slug": "gallina-adulta",
+      "category": "gallinas",
+      "price": 2800,
+      "unit": "Por unidad",
+      "image": "https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?w=600&h=400&fit=crop",
+      "description": "Gallinas adultas en plena producción. Ideales para arrancar tu propia producción casera de inmediato.",
+      "longDescription": "Gallinas Isa Brown adultas que ya están poniendo huevos regularmente. Perfectas si querés tener huevos frescos desde el primer día. Acostumbradas a corral, sanas y con buen temperamento. Incluye asesoramiento básico de cuidado.",
+      "features": [
+        "En producción activa",
+        "Raza Isa Brown",
+        "Sanas y fuertes",
+        "Acostumbradas a corral",
+        "Buen temperamento"
+      ],
+      "productionInfo": {
+        "eggsPerYear": "250-280 huevos/año",
+        "currentProduction": "5-6 huevos/semana",
+        "peakProduction": "En producción actual"
+      },
+      "available": true,
+      "stock": "medium",
+      "featured": false,
+      "badge": "Producción Inmediata",
+      "tags": ["gallina", "ponedora", "adulta", "inmediato"],
+      "weight": "1.8-2.2kg aprox",
+      "minOrder": 2,
+      "maxOrder": 15,
+      "care": "Requiere corral y alimentación balanceada"
+    },
+    {
+      "id": 8,
+      "name": "Verduras de Huerta - Mix Estacional",
+      "slug": "verduras-mix",
+      "category": "verduras",
+      "price": 1800,
+      "unit": "Bolsa ~3kg",
+      "image": "https://images.unsplash.com/photo-1540420773420-3366772f4999?w=600&h=400&fit=crop",
+      "description": "Bolsa mix de verduras de nuestra huerta agroecológica. Variedad según temporada.",
+      "longDescription": "Bolsa sorpresa con verduras de estación cultivadas en nuestra huerta agroecológica. Sin agrotóxicos, con sabor de verdad. El contenido varía según lo que esté en cosecha: lechugas, acelga, remolacha, zanahoria, rabanitos, aromáticas y más. Aproximadamente 3-4kg de verduras frescas.",
+      "features": [
+        "Cosecha del día",
+        "Sin agrotóxicos",
+        "Variedad estacional",
+        "Aprox 3-4kg",
+        "Cultivo sustentable"
+      ],
+      "seasonalItems": [
+        "Lechuga",
+        "Acelga",
+        "Remolacha",
+        "Zanahoria",
+        "Rabanitos",
+        "Aromáticas",
+        "Verduras de hoja"
+      ],
+      "available": false,
+      "stock": "none",
+      "featured": false,
+      "badge": "Próximamente",
+      "tags": ["verduras", "huerta", "agroecológico", "estacional"],
+      "weight": "3-4kg aprox",
+      "minOrder": 1,
+      "maxOrder": 5,
+      "season": "Primavera-Verano",
+      "expectedDate": "Octubre 2025"
+    },
+    {
+      "id": 9,
+      "name": "Pack Familia - Huevos + Pollo",
+      "slug": "pack-familia",
+      "category": "combos",
+      "price": 6800,
+      "unit": "Pack completo",
+      "image": "https://images.unsplash.com/photo-1563514227147-6d2ff665a6a0?w=600&h=400&fit=crop",
+      "description": "1 docena de huevos + 1 pollo entero. Ahorrás $500. Ideal para abastecimiento semanal.",
+      "longDescription": "Combo perfecto para familias: una docena de nuestros mejores huevos agroecológicos más un pollo de campo entero. Ahorrás $500 respecto a comprar por separado. Todo lo necesario para una semana de proteínas de calidad.",
+      "features": [
+        "Ahorro de $500",
+        "1 docena de huevos",
+        "1 pollo entero (2-2.5kg)",
+        "Productos frescos",
+        "Pack económico"
+      ],
+      "includes": [
+        "12 huevos agroecológicos",
+        "1 pollo de campo entero (2-2.5kg)"
+      ],
+      "available": true,
+      "stock": "high",
+      "featured": true,
+      "badge": "Ahorro $500",
+      "tags": ["combo", "pack", "ahorro", "familia"],
+      "weight": "3-3.5kg total",
+      "minOrder": 1,
+      "maxOrder": 3,
+      "savings": 500,
+      "originalPrice": 7300
+    },
+    {
+      "id": 10,
+      "name": "Alimento Balanceado Natural - Gallinas",
+      "slug": "alimento-gallinas",
+      "category": "insumos",
+      "price": 2500,
+      "unit": "Bolsa 10kg",
+      "image": "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=600&h=400&fit=crop",
+      "description": "Alimento balanceado natural para gallinas ponedoras. Formulación propia con granos seleccionados.",
+      "longDescription": "Preparamos nuestro propio alimento balanceado con maíz, trigo, soja, girasol y complementos minerales. Sin colorantes ni conservantes artificiales. Ideal para quienes tienen gallinas en casa y buscan alimentación de calidad.",
+      "features": [
+        "Formulación propia",
+        "Granos seleccionados",
+        "Sin colorantes",
+        "10kg rinden 30-45 días",
+        "Para ponedoras"
+      ],
+      "ingredients": [
+        "Maíz",
+        "Trigo",
+        "Soja",
+        "Girasol",
+        "Complementos minerales",
+        "Conchilla"
+      ],
+      "available": true,
+      "stock": "high",
+      "featured": false,
+      "badge": null,
+      "tags": ["alimento", "gallinas", "balanceado", "natural"],
+      "weight": "10kg",
+      "minOrder": 1,
+      "maxOrder": 10,
+      "usage": "Para 3-4 gallinas durante 30-45 días"
+    }
+  ],
+  "categories": [
+    {
+      "id": "huevos",
+      "name": "Huevos",
+      "slug": "huevos",
+      "description": "Huevos frescos de gallinas criadas en libertad",
+      "image": "https://images.unsplash.com/photo-1582722872445-44dc1f3e3b84?w=400&h=300&fit=crop"
+    },
+    {
+      "id": "pollos",
+      "name": "Pollos",
+      "slug": "pollos",
+      "description": "Pollos de campo criados naturalmente",
+      "image": "https://images.unsplash.com/photo-1587593810167-a84920ea0781?w=400&h=300&fit=crop"
+    },
+    {
+      "id": "gallinas",
+      "name": "Gallinas Ponedoras",
+      "slug": "gallinas",
+      "description": "Gallinas para producción casera de huevos",
+      "image": "https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?w=400&h=300&fit=crop"
+    },
+    {
+      "id": "verduras",
+      "name": "Verduras",
+      "slug": "verduras",
+      "description": "Verduras agroecológicas de nuestra huerta",
+      "image": "https://images.unsplash.com/photo-1540420773420-3366772f4999?w=400&h=300&fit=crop"
+    },
+    {
+      "id": "combos",
+      "name": "Combos",
+      "slug": "combos",
+      "description": "Packs con descuento para familias",
+      "image": "https://images.unsplash.com/photo-1563514227147-6d2ff665a6a0?w=400&h=300&fit=crop"
+    },
+    {
+      "id": "insumos",
+      "name": "Insumos",
+      "slug": "insumos",
+      "description": "Alimentos y productos para tu granja casera",
+      "image": "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=400&h=300&fit=crop"
+    }
+  ],
+  "metadata": {
+    "lastUpdate": "2025-01-15",
+    "currency": "ARS",
+    "locale": "es-AR",
+    "timezone": "America/Argentina/Jujuy"
+  }
+}
