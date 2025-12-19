@@ -1,0 +1,572 @@
+---
+// src/pages/404.astro
+import Layout from '../layouts/Layout.astro';
+
+// Popular pages suggestions
+const suggestions = [
+  {
+    title: 'Productos',
+    description: 'Explorá nuestro catálogo de huevos, pollos y más',
+    icon: 'products',
+    link: '/productos',
+    color: 'green'
+  },
+  {
+    title: 'Visitá la Granja',
+    description: 'Reservá una experiencia educativa para toda la familia',
+    icon: 'visit',
+    link: '/visitas',
+    color: 'blue'
+  },
+  {
+    title: 'Nosotros',
+    description: 'Conocé nuestra historia y valores',
+    icon: 'about',
+    link: '/nosotros',
+    color: 'yellow'
+  },
+  {
+    title: 'Contacto',
+    description: 'Hablemos por WhatsApp, teléfono o email',
+    icon: 'contact',
+    link: '/contacto',
+    color: 'purple'
+  }
+];
+---
+
+<Layout 
+  title="Página No Encontrada - Granja Don Felipe"
+  description="La página que buscás no existe. Explorá nuestros productos, visitá la granja o contactanos."
+>
+  
+  <section class="min-h-[80vh] flex items-center justify-center bg-gradient-to-br from-cream-50 to-green-50 py-20 relative overflow-hidden">
+    
+    <!-- Background decorative elements -->
+    <div class="absolute top-20 left-10 w-32 h-32 bg-green-200 rounded-full opacity-20 blur-3xl animate-pulse"></div>
+    <div class="absolute bottom-20 right-10 w-40 h-40 bg-yellow-200 rounded-full opacity-20 blur-3xl animate-pulse delay-animation"></div>
+    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-green-100 rounded-full opacity-10 blur-3xl"></div>
+
+    <div class="container mx-auto px-4 relative z-10">
+      <div class="max-w-5xl mx-auto">
+        
+        <!-- Error Section -->
+        <div class="text-center mb-16">
+          <!-- Animated 404 -->
+          <div class="text-center mb-16 relative">
+            <!-- 404 gigante -->
+            <h1 class="error-404">
+              404
+            </h1>
+
+            <!-- Gallina -->
+            <div class="chicken-container">
+              <div class="chicken">
+                <!-- Body -->
+                <div class="chicken-body"></div>
+                <!-- Head -->
+                <div class="chicken-head">
+                  <!-- Eye -->
+                  <div class="chicken-eye"></div>
+                  <!-- Beak -->
+                  <div class="chicken-beak"></div>
+                  <!-- Crest -->
+                  <div class="chicken-crest"></div>
+                </div>
+                <!-- Wing -->
+                <div class="chicken-wing"></div>
+                <!-- Legs -->
+                <div class="chicken-leg chicken-leg-left"></div>
+                <div class="chicken-leg chicken-leg-right"></div>
+                <!-- Question marks -->
+                <span class="question-mark q1">?</span>
+                <span class="question-mark q2">?</span>
+                <span class="question-mark q3">?</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Text content -->
+          <div class="space-y-4 mb-12">
+            <h2 class="font-serif text-4xl lg:text-5xl font-bold text-gray-900">
+              ¡Ups! Esta Gallina se Perdió
+            </h2>
+            <p class="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
+              La página que buscás no existe o fue movida. Pero no te preocupes, te ayudamos a encontrar lo que necesitás.
+            </p>
+          </div>
+
+          <!-- Search bar -->
+          <div class="max-w-xl mx-auto mb-12">
+            <form action="/productos" method="GET" class="relative flex gap-2">
+              <input 
+                type="search" 
+                name="q"
+                placeholder="Buscá productos, visitas, info..."
+                class="w-full px-6 py-4 rounded-full border-2 border-gray-200 focus:border-green-600 focus:ring-4 focus:ring-green-600 focus:ring-opacity-20 transition-all text-lg"
+              />
+              <button 
+                type="submit"
+                class="px-6 py-2 bg-green-600 text-white font-semibold rounded-full hover:bg-green-700 transition-colors"
+              >
+                Buscar
+              </button>
+            </form>
+          </div>
+
+          <!-- Quick actions -->
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a 
+              href="/"
+              class="inline-flex items-center justify-center px-8 py-4 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 transition-all duration-300 hover:shadow-xl text-lg"
+            >
+              <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+              </svg>
+              Volver al Inicio
+            </a>
+            <a 
+              href="https://wa.me/5493884000000?text=Hola!%20No%20pude%20encontrar%20lo%20que%20buscaba%20en%20la%20web"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center justify-center px-8 py-4 border-2 border-green-600 text-green-600 font-semibold rounded-lg hover:bg-green-50 transition-all duration-300 text-lg"
+            >
+              <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+              </svg>
+              Ayuda por WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <!-- Suggestions grid -->
+        <div class="mb-20">
+          <h3 class="font-serif text-3xl font-bold text-gray-900 text-center mb-8">
+            ¿Qué estás buscando?
+          </h3>
+          
+          <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {suggestions.map((item) => (
+              <a 
+                href={item.link}
+                class="group bg-white rounded-3xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-2 border-transparent hover:border-green-600"
+              >
+                <div class={`w-14 h-14 rounded-2xl flex items-center justify-center mb-4 transition-transform group-hover:scale-110 ${
+                  item.color === 'green' ? 'bg-green-100' :
+                  item.color === 'blue' ? 'bg-blue-100' :
+                  item.color === 'yellow' ? 'bg-yellow-100' :
+                  'bg-purple-100'
+                }`}>
+                  {item.icon === 'products' && (
+                    <svg class={`w-7 h-7 ${item.color === 'green' ? 'text-green-600' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
+                    </svg>
+                  )}
+                  {item.icon === 'visit' && (
+                    <svg class={`w-7 h-7 ${item.color === 'blue' ? 'text-blue-600' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+                    </svg>
+                  )}
+                  {item.icon === 'about' && (
+                    <svg class={`w-7 h-7 ${item.color === 'yellow' ? 'text-yellow-600' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                  )}
+                  {item.icon === 'contact' && (
+                    <svg class={`w-7 h-7 ${item.color === 'purple' ? 'text-purple-600' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                    </svg>
+                  )}
+                </div>
+                
+                <h4 class="font-serif text-xl font-bold text-gray-900 mb-2 group-hover:text-green-600 transition-colors">
+                  {item.title}
+                </h4>
+                
+                <p class="text-gray-600 text-sm mb-4 leading-relaxed">
+                  {item.description}
+                </p>
+                
+                <span class="inline-flex items-center text-green-600 font-medium text-sm group-hover:translate-x-1 transition-transform">
+                  Ir a {item.title}
+                  <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                  </svg>
+                </span>
+              </a>
+            ))}
+          </div>
+        </div>
+
+        <!-- Fun fact -->
+        <div class="mt-16 text-center">
+          <div class="bg-yellow-50 border-2 border-yellow-200 rounded-2xl p-6 max-w-2xl mx-auto">
+            <p class="text-yellow-800 font-medium mb-2">
+              🐔 Dato Curioso
+            </p>
+            <p class="text-yellow-900">
+              Las gallinas tienen mejor memoria espacial que los humanos. Pueden recordar la ubicación de más de 100 objetos diferentes. ¡Nosotros no pudimos encontrar tu página, pero ellas nunca se pierden en la granja!
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+  /* 404 Number */
+  .error-404 {
+    font-family: serif;
+    font-weight: 700;
+    color: rgb(5 150 105);
+    opacity: 0.2;
+    user-select: none;
+    line-height: 1;
+    position: relative;
+    z-index: 0;
+    font-size: 9rem;
+    animation: float 3s ease-in-out infinite;
+  }
+
+  @media (min-width: 640px) {
+    .error-404 {
+      font-size: 12rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .error-404 {
+      font-size: 15rem;
+    }
+  }
+
+  /* Chicken Container */
+  .chicken-container {
+    position: relative;
+    margin-top: -6rem;
+    z-index: 20;
+    display: flex;
+    justify-content: center;
+  }
+
+  @media (min-width: 640px) {
+    .chicken-container {
+      margin-top: -7rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .chicken-container {
+      margin-top: -9rem;
+    }
+  }
+
+  /* Chicken */
+  .chicken {
+    position: relative;
+    width: 120px;
+    height: 140px;
+  }
+
+  @media (min-width: 640px) {
+    .chicken {
+      width: 150px;
+      height: 175px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .chicken {
+      width: 180px;
+      height: 210px;
+    }
+  }
+
+  /* Body */
+  .chicken-body {
+    position: absolute;
+    left: 50%;
+    top: 55%;
+    transform: translateX(-50%);
+    width: 70px;
+    height: 55px;
+    background: #F59E0B;
+    border-radius: 50%;
+  }
+
+  @media (min-width: 640px) {
+    .chicken-body {
+      width: 85px;
+      height: 68px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .chicken-body {
+      width: 100px;
+      height: 80px;
+    }
+  }
+
+  /* Head */
+  .chicken-head {
+    position: absolute;
+    left: 50%;
+    top: 28%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 50px;
+    background: #F59E0B;
+    border-radius: 50%;
+  }
+
+  @media (min-width: 640px) {
+    .chicken-head {
+      width: 60px;
+      height: 60px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .chicken-head {
+      width: 70px;
+      height: 70px;
+    }
+  }
+
+  /* Eye */
+  .chicken-eye {
+    position: absolute;
+    left: 30%;
+    top: 35%;
+    width: 6px;
+    height: 6px;
+    background: #1F2937;
+    border-radius: 50%;
+  }
+
+  @media (min-width: 640px) {
+    .chicken-eye {
+      width: 7px;
+      height: 7px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .chicken-eye {
+      width: 8px;
+      height: 8px;
+    }
+  }
+
+  /* Beak */
+  .chicken-beak {
+    position: absolute;
+    left: -15px;
+    top: 40%;
+    width: 0;
+    height: 0;
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    border-right: 12px solid #EF4444;
+  }
+
+  @media (min-width: 640px) {
+    .chicken-beak {
+      border-top: 7px solid transparent;
+      border-bottom: 7px solid transparent;
+      border-right: 14px solid #EF4444;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .chicken-beak {
+      border-top: 8px solid transparent;
+      border-bottom: 8px solid transparent;
+      border-right: 16px solid #EF4444;
+    }
+  }
+
+  /* Crest */
+  .chicken-crest {
+    position: absolute;
+    left: 50%;
+    top: -20px;
+    transform: translateX(-50%);
+    width: 25px;
+    height: 18px;
+    background: #EF4444;
+    border-radius: 50% 50% 0 0;
+  }
+
+  @media (min-width: 640px) {
+    .chicken-crest {
+      width: 30px;
+      height: 22px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .chicken-crest {
+      width: 35px;
+      height: 25px;
+    }
+  }
+
+  /* Wing */
+  .chicken-wing {
+    position: absolute;
+    right: 15px;
+    top: 58%;
+    width: 22px;
+    height: 30px;
+    background: #F97316;
+    border-radius: 0 50% 50% 0;
+    transform: rotate(-15deg);
+  }
+
+  @media (min-width: 640px) {
+    .chicken-wing {
+      width: 28px;
+      height: 38px;
+      right: 18px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .chicken-wing {
+      width: 32px;
+      height: 45px;
+      right: 22px;
+    }
+  }
+
+  /* Legs */
+  .chicken-leg {
+    position: absolute;
+    width: 3px;
+    height: 25px;
+    background: #F97316;
+    bottom: 8px;
+  }
+
+  @media (min-width: 640px) {
+    .chicken-leg {
+      height: 30px;
+      bottom: 10px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .chicken-leg {
+      width: 4px;
+      height: 35px;
+      bottom: 12px;
+    }
+  }
+
+  .chicken-leg-left {
+    left: 42%;
+  }
+
+  .chicken-leg-right {
+    right: 42%;
+  }
+
+  .chicken-leg::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-top: 5px solid #F97316;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+  }
+
+  /* Question Marks */
+  .question-mark {
+    position: absolute;
+    font-size: 1.5rem;
+    color: rgb(5 150 105);
+    opacity: 0.5;
+    font-weight: 600;
+    animation: float-question 2s ease-in-out infinite;
+  }
+
+  @media (min-width: 640px) {
+    .question-mark {
+      font-size: 1.75rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .question-mark {
+      font-size: 2rem;
+    }
+  }
+
+  .q1 {
+    left: -25px;
+    top: 50%;
+    animation-delay: 0s;
+  }
+
+  .q2 {
+    right: -25px;
+    top: 50%;
+    animation-delay: 0.7s;
+  }
+
+  .q3 {
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    animation-delay: 1.4s;
+  }
+
+  @keyframes float-question {
+    0%, 100% {
+      transform: translateY(0) translateX(-50%);
+    }
+    50% {
+      transform: translateY(-8px) translateX(-50%);
+    }
+  }
+
+  .q1, .q2 {
+    animation-name: float-question-side;
+  }
+
+  @keyframes float-question-side {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-8px);
+    }
+  }
+
+  /* Animations */
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-18px);
+    }
+  }
+
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .delay-animation {
+    animation-delay: 1s;
+  }
+</style>

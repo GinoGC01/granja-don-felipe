@@ -4,6 +4,7 @@ import Layout from '../layouts/Layout.astro';
 
 // Importar datos desde JSON
 import productsData from '../data/products.json';
+import Arrow from '../icons/Arrow.astro';
 
 const products = productsData.products;
 
@@ -126,10 +127,12 @@ const categories = allCategories;
             </div>
 
             <!-- Content -->
-            <a href={`/Productos/${product.slug}`} class="p-6 block">
+            <a href={`/Productos/${product.slug}`} class="p-6 block relative">
               <h3 class="font-serif text-2xl font-bold text-gray-900 mb-2 flex items-center gap-2">
-                {product.name} <span class="i-maki-arrow"></span>
+                {product.name} 
               </h3>
+
+              <span class="absolute top-0 right-0 p-2"><Arrow width="16" height="16" color="#16A34A" /></span>
               
               <p class="text-gray-600 mb-4 line-clamp-2">
                 {product.description}

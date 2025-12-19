@@ -278,9 +278,10 @@ import '../styles/global.css';
         Escribinos!
       </span>
     </a>
+  </body>
+</html>
 
-    <!-- Mobile Menu Script -->
-    <script>
+<script>
       const mobileMenuButton = document.getElementById('mobile-menu-button');
       const mobileMenu = document.getElementById('mobile-menu');
       
@@ -289,9 +290,43 @@ import '../styles/global.css';
           mobileMenu.classList.toggle('hidden');
         });
       }
-    </script>
-  </body>
-</html>
+
+       function animateCounter(element:Element, target:number, duration:number = 2000, suffix:string = '') {
+      const start = 0;
+      const increment = target / (duration / 16);
+      let current = start;
+      
+      const timer = setInterval(() => {
+        current += increment;
+        if (current >= target) {
+          current = target;
+          clearInterval(timer);
+        }
+        element.textContent = Math.floor(current) + suffix;
+      }, 16);
+    }
+
+
+
+    // Intersection Observer for Counter Animation
+    const counterObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !entry.target.classList.contains('counted')) {
+          entry.target.classList.add('counted');
+          const value = entry.target.getAttribute('data-counter');
+          const target = parseInt(value || '0', 10);
+          const suffix = target === 100 ? '%' : target === 5000 ? '+' : '+';
+          animateCounter(entry.target, target, 2000, suffix);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    // Observe counter elements
+    document.addEventListener('DOMContentLoaded', () => {
+      const counters = document.querySelectorAll('[data-counter]');
+      counters.forEach(counter => counterObserver.observe(counter));
+    });
+</script>
 
 <style is:global>
   /* View Transitions */
@@ -325,4 +360,8 @@ import '../styles/global.css';
   .bg-cream-100 {
     background-color: var(--cream-100);
   }
+
+  
 </style>
+
+
